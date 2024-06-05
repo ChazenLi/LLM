@@ -1,0 +1,116 @@
+/* 设定一些CSS变量来方便主题颜色的更改 */
+:root {
+  --bg-color: white;
+  --bg-history: #f0f0f0;
+  --bg-ai-message: #e5e5ff;
+  --bg-user-message: #d8f8c8;
+  --text-color: #333;
+  --button-bg-color: #007BFF;
+  --button-hover-bg-color: #0056b3;
+}
+
+/* 使用变量设定背景颜色 */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px; /* 确保网站名称与提问框之间有间隔 */
+}
+
+#ask-form {
+  display: flex;
+  flex-direction: column; /* 调整为垂直方向排列 */
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#question {
+  width: 100%; /* 输入框占满整个表单宽度 */
+  padding: 10px;
+  margin-bottom: 10px; /* 与提交按钮间隔 */
+  border: 2px solid #eee;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background-color: var(--button-bg-color);
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: var(--button-hover-bg-color);
+}
+
+/* 聊天历史的样式 */
+#history {
+  background-color: var(--bg-history);
+  border: 1px solid #ccc;
+  overflow-y: auto;
+  max-height: 300px;
+  margin-bottom: 20px; /* 和提问框的间隔 */
+  padding: 10px;
+}
+
+/* 用户消息的样式 */
+.user-message {
+  background-color: var(--bg-user-message);
+  margin-top: 4px;
+  margin-bottom: 4px;
+  padding: 10px;
+  border-radius: 10px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 80%;
+  align-self: flex-end; /* 靠右显示 */
+}
+
+/* AI消息的样式 */
+.ai-message {
+  background-color: var(--bg-ai-message);
+  margin-top: 4px;
+  margin-bottom: 4px;
+  padding: 10px;
+  border-radius: 10px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 80%;
+  align-self: flex-start; /* 靠左显示 */
+}
+
+/* 响应式设计，确保在不同屏幕大小下界面的适应性 */
+@media screen and (max-width: 768px){
+  body {
+    padding: 10px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #history::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  #history::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  #history::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+  }
+}
+
+/* 其他样式可以按需添加或修改 */

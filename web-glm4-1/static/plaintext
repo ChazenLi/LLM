@@ -1,0 +1,12 @@
+/YourAppFolder
+  /static
+    /css
+      style.css
+    /js
+      script.js
+    /images
+      logo.png
+  /templates
+    index.html
+  app.py
+  settings.py

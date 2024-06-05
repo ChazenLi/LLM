@@ -1,0 +1,62 @@
+/* static/css/style.css */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+}
+
+#ask-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#question {
+  width: 70%;
+  padding: 10px;
+  margin-right: 10px;
+  border: 2px solid #eee;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007BFF;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#answer {
+  border: 1px solid #ccc;
+  background-color: #fff;
+  padding: 20px;
+  margin-top: 20px;
+  min-height: 50px;
+  border-radius: 4px;
+}
+
+/* 回答部分的显示样式 */
+.answer-user {
+  font-weight: bold;
+}
+
+.answer-bot {
+  margin-left: 20px;
+  display: block;
+}

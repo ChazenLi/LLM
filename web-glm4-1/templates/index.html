@@ -1,0 +1,29 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI问答网站</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    <script type="text/javascript" src="/static/js/script.js"></script>
+</head>
+<body>
+    <h1>AI问答</h1>
+
+    <div id="history"></div>
+
+    <div id="ask-form">
+        <input type="text" id="question" placeholder="请输入您的问题" />
+        <button type="submit">提问</button>
+    </div>
+    <!-- 答案容器已通过JavaScript动态生成，因此不再需要额外的回答容器 -->
+
+    <script>
+        // 页面加载完毕时加载聊天历史
+        window.onload = function() {
+            loadChatHistory();
+        };
+    </script>
+</body>
+</html>
